@@ -1,0 +1,47 @@
+
+#table{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 20px;
+    border: solid grey 4px;
+}
+
+.card{
+    height: 160px;
+    width: 160px;
+    padding: 15px;
+    background-color: grey;
+    margin: 20px;
+}
+.card > * {
+    height: 120px;
+    width: 120px;
+}
+
+#cpu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#player {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
