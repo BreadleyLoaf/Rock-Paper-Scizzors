@@ -8,21 +8,26 @@ const cards = document.querySelectorAll("#buttons > *");
 const pChoice = document.querySelector("#pChoice");
 const cChoice = document.querySelector("#cChoice");
 
+const pCard = document.createElement("img");
+const cCard = document.createElement("img");
+
 function proceed(){
     confirm.addEventListener("onclick", () => {
-        return;
+        return 1;
     })
 }
 
 function chat(string){
     textbox.textContent = string;
-    textbox.style.fontSize = "16px";
+    textbox.style.background = "grey";
+    textbox.style.fontSize = "30px";
     cpu.appendChild(textbox);
+    console.log(string);
     proceed();
 }
 
 function getCompChoice(){
-    let choice = Math.random;
+    let choice = Math.random; 
     if (choice < (1/3)){
         choice = "rock";
     } else if (choice < (2/3)){
@@ -46,10 +51,10 @@ function getHumanChoice(){
             if(hChoice === card.id){
                 cards.backgroundColor = "grey";
                 card.style.backgroundColor = "blue";
+                pCard.src = "./images/" + card.id + ".jpg";
             }
         })
     });
-    proceed();
     return hChoice;
 }
 
@@ -111,4 +116,4 @@ function playGame(){
     }
 }
 
-playGame();
+let x = playRound();
